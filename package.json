@@ -3,6 +3,9 @@
   "version": "0.0.4",
   "description": "小程序cli工具",
   "main": "index.js",
+  "bin": {
+    "mp-cli": "./bin/www"
+  },
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx,.vue .",
@@ -46,6 +49,9 @@
     "standard-version": "^9.5.0"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.0",
+    "figlet": "^1.5.2",
     "miniprogram-ci": "^1.8.35",
     "shelljs": "^0.8.5"
   }

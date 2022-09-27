@@ -1,0 +1,69 @@
+#! /usr/bin/env node
+const chalk = require("chalk");
+const program = require("commander");
+const figlet = require("figlet");
+
+const CLI_NAME = 'light-mp-cli';
+
+program
+  .command("upload <appId>") 
+  .description("upload mp code")
+  .action((appId) => {
+    // 处理用户输入create 指令附加的参数
+    require("../src/upload")({
+      appId
+    });
+  });
+
+program
+  .command("preview <appId>") 
+  .description("preview mp code")
+  .action((appId) => {
+    // 处理用户输入create 指令附加的参数
+    require("../src/preview")({
+      appId
+    });
+  });
+
+program
+  .command("config [value]")
+  .description("inspect and modify the config")
+  .option("-g, --get <key>", "get value by key")
+  .option("-s, --set <key> <value>", "set option[key] is value")
+  .option("-d, --delete <key>", "delete option by key")
+  .action((value, keys) => {
+    console.log(value, keys);
+  });
+
+program.on("--help", function () {
+  console.log(
+    "\r\n" +
+      figlet.textSync(`${CLI_NAME}`, {
+        // font: "3D-ASCII",
+        horizontalLayout: "default",
+        verticalLayout: "default",
+        width: 80,
+        whitespaceBreak: true,
+      })
+  );
+  // 前后两个空行调整格式，更舒适
+  console.log();
+  console.log(
+    `Run ${chalk.cyan(
+      `${CLI_NAME} <command> --help`
+    )} for detailed usage of given command.`
+  );
+  console.log();
+});
+
+program
+  .name(CLI_NAME)
+  .usage(`<command> [option]`)
+  .version(`${CLI_NAME} ${require("../package.json").version}`);
+
+
+// 解析用户执行时输入的参数
+// process.argv 是 nodejs 提供的属性
+// npm run server --port 3000
+// 后面的 --port 3000 就是用户输入的参数
+program.parse(process.argv);
