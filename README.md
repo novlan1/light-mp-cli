@@ -1,4 +1,4 @@
-# mp-cli
+# light-mp-cli
 
 
 ## Usage
