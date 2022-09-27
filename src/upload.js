@@ -1,4 +1,5 @@
 const ci = require('miniprogram-ci');
+const { timeStampFormat } = require('t-comm');
 const { getVersion, init, commit } = require('./cli');
 const sendRobotMsg = require('./wecom');
 
@@ -59,7 +60,7 @@ async function uploadMp({
       appName,
       version,
       developer: `ci机器人${robot}`,
-      time: Date.now(),
+      time: timeStampFormat(Date.now()),
       desc: fullDesc,
       webhookUrl,
     });
