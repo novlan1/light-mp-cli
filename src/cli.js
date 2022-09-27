@@ -2,7 +2,7 @@
 const path = require('path');
 const shell = require('shelljs');
 const ci = require('miniprogram-ci');
-const pkg = require('./package.json');
+const pkg = require(path.resolve(process.cwd(), './package.json'));
 
 const desc = '小程序上传';
 const args = process.argv.splice(2);

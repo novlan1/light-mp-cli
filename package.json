@@ -42,7 +42,8 @@
     "@commitlint/config-conventional": "^17.1.0",
     "eslint-config-light": "^1.0.4",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
     "miniprogram-ci": "^1.8.35",

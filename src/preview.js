@@ -12,7 +12,7 @@ async function previewMp({
   ignores,
 }) {
   try {
-    const projectCi = init({
+    const projectCi = await init({
       appId,
       type,
       projectPath,
