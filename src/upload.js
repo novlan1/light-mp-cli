@@ -60,7 +60,7 @@ async function uploadMp({
       appName,
       version,
       developer: `ci机器人${robot}`,
-      time: timeStampFormat(Date.now()),
+      time: timeStampFormat(Date.now(), 'yyyy-MM-dd hh:mm:ss'),
       desc: fullDesc,
       webhookUrl,
     });
