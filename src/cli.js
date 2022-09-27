@@ -58,7 +58,7 @@ function getLog() {
 module.exports = {
   projectName: pkg.name, // 项目名，用于后台设置的账号密码匹配
   version: pkg.version, // 本次发布的版本号
-  desc: `小程序环境：${args[0]}`, // 上传备注信息
+  desc: `小程序环境：${args[0] || ''}`, // 上传备注信息
   init,
   commit,
 };
