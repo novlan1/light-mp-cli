@@ -1,6 +1,6 @@
 const ci = require('miniprogram-ci');
 const { getVersion, desc, init, commit } = require('./cli');
-const { sendRobotMsg } = require('./wecom');
+const sendRobotMsg = require('./wecom');
 
 console.log('------开始上传------');
 
