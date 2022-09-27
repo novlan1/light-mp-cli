@@ -8,11 +8,15 @@ async function sendRobotMsg({
   desc = '',
   webhookUrl,
 }) {
+  if (!webhookUrl) {
+    return;
+  }
+
   const descList = [
-    `**版本**：${version}`,
-    `**提交者**：${developer}`,
-    `**提交时间**：${time}`,
-    `**项目备注**：${desc}`,
+    `**版本**：${version || ''}`,
+    `**提交者**：${developer || ''}`,
+    `**提交时间**：${time || ''}`,
+    `**项目备注**：${desc || ''}`,
   ];
   const template = `>### 【${appName}自动化构建成功】\n${descList.join('\n')}`;
 
