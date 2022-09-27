@@ -1,0 +1,51 @@
+{
+  "name": "light-mp-cli",
+  "version": "0.0.1",
+  "description": "小程序cli工具",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.ts,.tsx,.jsx,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx,.jsx,.vue .",
+    "release": "npm run release-patch && git push --follow-tags origin master && npm publish",
+    "release:first": "standard-version --first-release",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novlan1/light-mp-cli.git"
+  },
+  "keywords": [
+    "mp-cli",
+    "miniprogram-cli",
+    "light-mp-cli"
+  ],
+  "author": "guowangyang",
+  "files": [
+    "index.js",
+    "src/"
+  ],
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/novlan1/light-mp-cli/issues"
+  },
+  "homepage": "https://github.com/novlan1/light-mp-cli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "eslint-config-light": "^1.0.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "dependencies": {
+    "miniprogram-ci": "^1.8.35",
+    "shelljs": "^0.8.5"
+  }
+}
