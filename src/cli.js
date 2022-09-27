@@ -18,6 +18,7 @@ async function init({
   ignores = ['node_modules/**/*'],
   workSpace = process.cwd(),
 }) {
+  console.log('workSpace: ', workSpace);
   gWorkSpace = workSpace;
   if (!projectPath) {
     projectPath = path.resolve(workSpace, 'dist/build/mp-weixin');
