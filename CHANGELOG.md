@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/novlan1/light-mp-cli/compare/v0.0.6...v0.0.7) (2022-09-27)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复wecom推送 ([fc9dafe](https://github.com/novlan1/light-mp-cli/commit/fc9dafedad4fe46fb9ea702651be9bc2db83ac72))
+
 ### [0.0.6](https://github.com/novlan1/light-mp-cli/compare/v0.0.5...v0.0.6) (2022-09-27)
 
 
