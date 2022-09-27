@@ -1,11 +1,12 @@
 const ci = require('miniprogram-ci');
-const {  desc, init } = require('./cli');
+const { init } = require('./cli');
 
 console.log('------开始预览------');
 
 
 async function previewMp({
   appId,
+  env,
   type,
   projectPath,
   privateKeyPath,
@@ -23,7 +24,7 @@ async function previewMp({
     });
     const previewResult = await ci.preview({
       project: projectCi,
-      desc,
+      desc: `小程序环境：${env || ''}`,
       setting: {
         es6: true,
         minify: true,

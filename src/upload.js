@@ -1,5 +1,5 @@
 const ci = require('miniprogram-ci');
-const { getVersion, desc, init, commit } = require('./cli');
+const { getVersion, init, commit } = require('./cli');
 const sendRobotMsg = require('./wecom');
 
 console.log('------开始上传------');
@@ -8,13 +8,13 @@ async function uploadMp({
   appId,
   appName,
   webhookUrl,
+  env,
   type,
   projectPath,
   privateKeyPath,
   ignores,
   workSpace = process.cwd(),
   uploadOptions = {
-
   },
 }) {
   try {
@@ -25,12 +25,16 @@ async function uploadMp({
       privateKeyPath,
       ignores,
       workSpace,
-
     });
+    let robot;
+    if (env === 'production') {
+      robot = 3;
+    } else {
+      robot = 2;
+    }
     const gitLogInfo = await commit();
-    const robot = 2;
     const version = getVersion();
-    const fullDesc = `${desc}，开发分支：${gitLogInfo.branch}，描述：${gitLogInfo.message}，作者：${gitLogInfo.author}`;
+    const fullDesc = `小程序环境：${env || ''}，开发分支：${gitLogInfo.branch}，描述：${gitLogInfo.message}，作者：${gitLogInfo.author}`;
     console.log('gitLogInfo:\n', gitLogInfo);
 
     const uploadResult = await ci.upload({

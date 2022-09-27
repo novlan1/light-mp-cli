@@ -6,14 +6,18 @@ const figlet = require("figlet");
 const CLI_NAME = 'light-mp-cli';
 
 program
-  .command("upload <appId> <appName> <webhookUrl>") 
+  .command("upload <appId> <appName> <webhookUrl> <env>") 
   .description("upload mp code")
-  .action((appId, appName, webhookUrl) => {
-    // 处理用户输入create 指令附加的参数
+  .action((appId, appName, webhookUrl, env) => {
+    console.log('appId: ', appId);
+    console.log('appName: ', appName);
+    console.log('webhookUrl: ', webhookUrl);
+    console.log('env: ', env);
     require("../src/upload")({
       appId,
       appName,
-      webhookUrl
+      webhookUrl,
+      env,
     });
   });
 
