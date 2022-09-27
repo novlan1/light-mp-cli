@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/novlan1/light-mp-cli/compare/v0.0.8...v0.0.9) (2022-09-27)
+
+
+### ✨ Features | 新功能
+
+* 删除无效注释 ([d7e4454](https://github.com/novlan1/light-mp-cli/commit/d7e4454147b36f63b423dfb27ee946bb079b5160))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 机器人时间 ([33682f9](https://github.com/novlan1/light-mp-cli/commit/33682f9098b135eaf0a4e40e877c95585f1e0515))
+
 ### [0.0.8](https://github.com/novlan1/light-mp-cli/compare/v0.0.7...v0.0.8) (2022-09-27)
 
 
