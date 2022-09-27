@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/novlan1/light-mp-cli/compare/v0.0.4...v0.0.5) (2022-09-27)
+
+
+### ✨ Features | 新功能
+
+* 打印workspace ([8424a7f](https://github.com/novlan1/light-mp-cli/commit/8424a7f8145dadd1e393cbfc40593925fab47fcd))
+* 增加bin命令 ([ec1eda9](https://github.com/novlan1/light-mp-cli/commit/ec1eda9ef4c74a01f39c84a22b3ddc83df273840))
+
 ### [0.0.4](https://github.com/novlan1/light-mp-cli/compare/v0.0.3...v0.0.4) (2022-09-27)
 
 
