@@ -4,6 +4,9 @@ const { getVersion, init, commit } = require('./cli');
 const sendRobotMsg = require('./wecom');
 
 console.log('------开始上传------');
+const MAX_TRY_TIMES = 3;
+let tryTimes = 0;
+
 
 async function uploadMp({
   appId,
@@ -67,6 +70,23 @@ async function uploadMp({
   } catch (error) {
     console.log('------上传失败------');
     console.error(error);
+    if (tryTimes < MAX_TRY_TIMES) {
+      console.log('正在重试，重试次数：', tryTimes);
+      tryTimes += 1;
+
+      await uploadMp({
+        appId,
+        appName,
+        webhookUrl,
+        env,
+        type,
+        projectPath,
+        privateKeyPath,
+        ignores,
+        workSpace,
+        uploadOptions,
+      });
+    }
   } finally {
     console.log('------上传完成------');
   }
