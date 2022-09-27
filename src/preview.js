@@ -10,6 +10,7 @@ async function previewMp({
   projectPath,
   privateKeyPath,
   ignores,
+  workSpace = process.cwd(),
 }) {
   try {
     const projectCi = await init({
@@ -18,6 +19,7 @@ async function previewMp({
       projectPath,
       privateKeyPath,
       ignores,
+      workSpace,
     });
     const previewResult = await ci.preview({
       project: projectCi,

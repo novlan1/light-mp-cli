@@ -1,5 +1,5 @@
 const ci = require('miniprogram-ci');
-const { version, desc, init, commit } = require('./cli');
+const { getVersion, desc, init, commit } = require('./cli');
 
 console.log('------开始上传------');
 
@@ -9,6 +9,7 @@ async function uploadMp({
   projectPath,
   privateKeyPath,
   ignores,
+  workSpace = process.cwd(),
   uploadOptions = {
 
   },
@@ -20,6 +21,7 @@ async function uploadMp({
       projectPath,
       privateKeyPath,
       ignores,
+      workSpace,
 
     });
     const gitLogInfo = await commit();
@@ -27,7 +29,7 @@ async function uploadMp({
 
     const uploadResult = await ci.upload({
       project: projectCi,
-      version,
+      version: getVersion(),
       desc: `${desc}，开发分支：${gitLogInfo.branch}，描述：${gitLogInfo.message}，作者：${gitLogInfo.author}`,
       robot: 2, // 本地部署机器人为 2,Jenkins部署机器人为 1
       setting: {

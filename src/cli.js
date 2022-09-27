@@ -2,20 +2,29 @@
 const path = require('path');
 const shell = require('shelljs');
 const ci = require('miniprogram-ci');
-const pkg = require(path.resolve(process.cwd(), './package.json'));
 
 const desc = '小程序上传';
 const args = process.argv.splice(2);
 console.log('------小程序环境------', args[0]);
 
 
+let gWorkSpace = process.cwd();
+
 async function init({
   appId,
   type = 'miniProgram',
-  projectPath = path.resolve(process.cwd(), 'dist/build/mp-weixin'),
-  privateKeyPath = path.resolve(process.cwd(), 'private.key'),
+  projectPath,
+  privateKeyPath,
   ignores = ['node_modules/**/*'],
+  workSpace = process.cwd(),
 }) {
+  gWorkSpace = workSpace;
+  if (!projectPath) {
+    projectPath = path.resolve(workSpace, 'dist/build/mp-weixin');
+  }
+  if (!privateKeyPath) {
+    privateKeyPath = path.resolve(workSpace, 'private.key');
+  }
   const projectCi = new ci.Project({
     appid: appId,
     type,
@@ -55,10 +64,20 @@ function getLog() {
   });
 }
 
+function getVersion() {
+  const pkg = require(path.resolve(gWorkSpace, './package.json'));
+  return pkg.version;
+}
+
+function getProjectName() {
+  const pkg = require(path.resolve(gWorkSpace, './package.json'));
+  return pkg.name;
+}
+
 module.exports = {
-  projectName: pkg.name, // 项目名，用于后台设置的账号密码匹配
-  version: pkg.version, // 本次发布的版本号
   desc: `小程序环境：${args[0] || ''}`, // 上传备注信息
+  getProjectName, // 项目名，用于后台设置的账号密码匹配
+  getVersion,
   init,
   commit,
 };
