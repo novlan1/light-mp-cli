@@ -41,7 +41,7 @@ async function uploadMp({
       project: projectCi,
       version,
       desc: fullDesc,
-      robot, // 本地部署机器人为 2,Jenkins部署机器人为 1
+      robot,
       setting: {
         autoPrefixWXSS: false,
         es7: true,
