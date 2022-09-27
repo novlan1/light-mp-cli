@@ -1,6 +1,6 @@
 {
   "name": "light-mp-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "小程序cli工具",
   "main": "index.js",
   "scripts": {
