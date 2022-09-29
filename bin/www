@@ -5,19 +5,38 @@ const figlet = require("figlet");
 
 const CLI_NAME = 'light-mp-cli';
 
+/**
+ * node bin/www upload someAppid --webhookUrl=url1 --appName=appName2 --env=env3 --robot=2
+ */
 program
-  .command("upload <appId> <appName> <webhookUrl> <env>") 
+  .command("upload <appId>") 
   .description("upload mp code")
-  .action((appId, appName, webhookUrl, env) => {
+  .option('-n, --appName <appName>', 'set appName')
+  .option('-w, --webhookUrl <webhookUrl>', 'set webhookUrl for wecom robot')
+  .option('-e, --env <env>', 'set env')
+  .option('-r, --robot <robot>', 'set robotNumber')
+  .action((appId, options) => {
     console.log('appId: ', appId);
-    console.log('appName: ', appName);
-    console.log('webhookUrl: ', webhookUrl);
-    console.log('env: ', env);
+    console.log('options: ', options);
+    
+
+    const { 
+      appName,
+      webhookUrl,
+      env,
+      robot
+    } = options;
+
+    if (!env || !robot) {
+      throw new Error('Please set env and robot')
+    }
+
     require("../src/upload")({
       appId,
       appName,
       webhookUrl,
       env,
+      robot
     });
   });
 

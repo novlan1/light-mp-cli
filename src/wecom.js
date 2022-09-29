@@ -18,7 +18,7 @@ async function sendRobotMsg({
     `**提交时间**：${time || ''}`,
     `**项目备注**：${desc || ''}`,
   ];
-  const template = `>### 【${appName}自动化构建成功】\n${descList.join('\n')}`;
+  const template = `>**【${appName}自动化构建成功】**\n${descList.join('\n')}`;
 
   sendWxRobotMarkdown({
     webhookUrl,
