@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/novlan1/light-mp-cli/compare/v0.0.11...v0.0.12) (2022-09-29)
+
+
+### ✨ Features | 新功能
+
+* 优化机器人发送 ([2e2d6c8](https://github.com/novlan1/light-mp-cli/commit/2e2d6c824bec0385ee90b7841f14070fa8c359c1))
+* 优化脚本 ([5044c73](https://github.com/novlan1/light-mp-cli/commit/5044c73c3ccd7c58092827f3054f32cd8d34894a))
+
 ### [0.0.11](https://github.com/novlan1/light-mp-cli/compare/v0.0.10...v0.0.11) (2022-09-27)
 
 
