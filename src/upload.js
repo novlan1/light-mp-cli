@@ -40,8 +40,8 @@ async function realUpload({
     robot,
     setting: {
       autoPrefixWXSS: false,
-      es7: true,
-      es6: true,
+      es7: false,
+      es6: false,
       minify: true,
       minifyJS: true,
       // minifyWXML: true,
