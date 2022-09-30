@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/novlan1/light-mp-cli/compare/v0.0.16...v0.0.17) (2022-09-30)
+
+
+### ✨ Features | 新功能
+
+* 恢复es6编译，因为vant组件有用 ([d11e9f0](https://github.com/novlan1/light-mp-cli/commit/d11e9f02c0486d61e93a8658c7a2c3a1051e34b8))
+
 ### [0.0.16](https://github.com/novlan1/light-mp-cli/compare/v0.0.15...v0.0.16) (2022-09-30)
 
 
