@@ -5,7 +5,7 @@ const { getVersion, init, getDesc } = require('./cli');
 const sendRobotMsg = require('./wecom');
 
 
-const MAX_TRY_TIMES = 3;
+const DEFAULT_MAX_TRY_TIMES = 3;
 let tryTimes = 1;
 
 
@@ -69,6 +69,7 @@ async function uploadMp({
   webhookUrl,
   env,
   robot,
+  tryTimes: maxTryTimes = DEFAULT_MAX_TRY_TIMES,
 
 
   type,
@@ -99,7 +100,7 @@ async function uploadMp({
     console.log('------上传失败------');
     console.error(error);
 
-    if (tryTimes <= MAX_TRY_TIMES) {
+    if (tryTimes <= maxTryTimes) {
       console.log('正在重试，重试次数：', tryTimes);
       tryTimes += 1;
 

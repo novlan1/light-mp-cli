@@ -15,6 +15,7 @@ program
   .option('-w, --webhookUrl <webhookUrl>', 'set webhookUrl for wecom robot')
   .option('-e, --env <env>', 'set env')
   .option('-r, --robot <robot>', 'set robotNumber')
+  .option('-t, --tryTimes <tryTimes>', 'set tryTimes')
   .action((appId, options) => {
     console.log('appId: ', appId);
     console.log('options: ', options);
@@ -24,7 +25,8 @@ program
       appName,
       webhookUrl,
       env,
-      robot
+      robot,
+      tryTimes,
     } = options;
 
     if (!env || !robot) {
@@ -36,7 +38,8 @@ program
       appName,
       webhookUrl,
       env,
-      robot
+      robot,
+      tryTimes
     });
   });
 
