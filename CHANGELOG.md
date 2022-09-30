@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/novlan1/light-mp-cli/compare/v0.0.14...v0.0.15) (2022-09-30)
+
+
+### ✨ Features | 新功能
+
+* 增加重试次数选项 ([14ed4cc](https://github.com/novlan1/light-mp-cli/commit/14ed4ccbd32b2d75c1296bfbf9595a7458e754ff))
+
 ### [0.0.14](https://github.com/novlan1/light-mp-cli/compare/v0.0.13...v0.0.14) (2022-09-29)
 
 
