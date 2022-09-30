@@ -41,7 +41,7 @@ async function realUpload({
     setting: {
       autoPrefixWXSS: false,
       es7: false,
-      es6: false,
+      es6: true,
       minify: true,
       minifyJS: true,
       // minifyWXML: true,
