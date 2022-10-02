@@ -15,10 +15,10 @@ async function sendRobotMsg({
   const descList = [
     `版本: ${version || ''}`,
     `提交者: ${developer || ''}`,
-    `备注: ${desc || ''}`,
+    `${desc || ''}`,
     `提交时间: ${time || ''}`,
   ];
-  const template = `>【${appName}自动化构建成功】${descList.join(', ')}`;
+  const template = `>【${appName}自动化构建成功】${descList.join('，')}`;
 
   sendWxRobotMarkdown({
     webhookUrl,
