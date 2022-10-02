@@ -39,11 +39,11 @@ async function commit() {
   });
 }
 
-async function getDesc(env) {
+async function getDesc(env, author) {
   const gitLogInfo = await commit();
   console.log('gitLogInfo:\n', gitLogInfo);
 
-  const fullDesc = `小程序环境: ${env || ''}, 开发分支: ${gitLogInfo.branch}, 描述: ${gitLogInfo.message}, 作者: ${gitLogInfo.author}`;
+  const fullDesc = `小程序环境: ${env || ''}, 开发分支: ${gitLogInfo.branch}, 描述: ${gitLogInfo.message}, 作者: ${author || gitLogInfo.author}`;
   return fullDesc;
 }
 

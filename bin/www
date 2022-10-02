@@ -16,6 +16,7 @@ program
   .option('-e, --env <env>', 'set env')
   .option('-r, --robot <robot>', 'set robotNumber')
   .option('-t, --tryTimes <tryTimes>', 'set tryTimes')
+  .option('-a, --author <author>', 'set author')
   .action((appId, options) => {
     console.log('appId: ', appId);
     console.log('options: ', options);
@@ -27,6 +28,7 @@ program
       env,
       robot,
       tryTimes,
+      author,
     } = options;
 
     if (!env || !robot) {
@@ -39,7 +41,8 @@ program
       webhookUrl,
       env,
       robot,
-      tryTimes
+      tryTimes,
+      author,
     });
   });
 

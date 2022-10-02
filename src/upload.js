@@ -15,6 +15,7 @@ async function realUpload({
   webhookUrl,
   env,
   robot,
+  author,
 
   type,
   projectPath,
@@ -31,7 +32,7 @@ async function realUpload({
   });
 
   const version = await getVersion();
-  const fullDesc = await getDesc(env);
+  const fullDesc = await getDesc(env, author);
 
   const uploadResult = await ci.upload({
     project: projectCi,
@@ -70,6 +71,7 @@ async function uploadMp({
   env,
   robot,
   tryTimes: maxTryTimes = DEFAULT_MAX_TRY_TIMES,
+  author = '',
 
 
   type,
@@ -86,6 +88,7 @@ async function uploadMp({
     webhookUrl,
     env,
     robot,
+    author,
 
     type,
     projectPath,
