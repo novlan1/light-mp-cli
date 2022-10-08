@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/novlan1/light-mp-cli/compare/v0.0.19...v0.0.20) (2022-10-08)
+
+
+### ✨ Features | 新功能
+
+* 手动写入npm token ([742942b](https://github.com/novlan1/light-mp-cli/commit/742942ba54675fbcd3bf86ec9389d6137d765bc4))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复脚本 ([90d12e0](https://github.com/novlan1/light-mp-cli/commit/90d12e005258fd735980bbab914de670a3c83667))
+
 ### [0.0.19](https://github.com/novlan1/light-mp-cli/compare/v0.0.18...v0.0.19) (2022-10-08)
 
 
