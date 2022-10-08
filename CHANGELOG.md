@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/novlan1/light-mp-cli/compare/v0.0.18...v0.0.19) (2022-10-08)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 整理代码 ([ac0b7f8](https://github.com/novlan1/light-mp-cli/commit/ac0b7f886f68aee10be831239474a12ff40ea051))
+
+
+### ✨ Features | 新功能
+
+* 允许发送chatid ([b93d860](https://github.com/novlan1/light-mp-cli/commit/b93d860173dc48bd300397537397b007a34403fe))
+
 ### [0.0.18](https://github.com/novlan1/light-mp-cli/compare/v0.0.17...v0.0.18) (2022-10-02)
 
 
