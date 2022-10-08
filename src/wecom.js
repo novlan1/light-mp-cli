@@ -7,9 +7,13 @@ async function sendRobotMsg({
   time = '',
   desc = '',
   webhookUrl,
+  chatId,
 }) {
   if (!webhookUrl) {
     return;
+  }
+  if (!chatId) {
+    chatId = undefined;
   }
 
   const descList = [
@@ -23,6 +27,7 @@ async function sendRobotMsg({
   sendWxRobotMarkdown({
     webhookUrl,
     content: template,
+    chatId,
   });
 }
 

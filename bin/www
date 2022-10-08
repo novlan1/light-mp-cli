@@ -17,6 +17,7 @@ program
   .option('-r, --robot <robot>', 'set robotNumber')
   .option('-t, --tryTimes <tryTimes>', 'set tryTimes')
   .option('-a, --author <author>', 'set author')
+  .option('-c, --chatId <chatId>', 'set wecom robot chatId')
   .action((appId, options) => {
     console.log('appId: ', appId);
     console.log('options: ', options);
@@ -29,6 +30,7 @@ program
       robot,
       tryTimes,
       author,
+      chatId,
     } = options;
 
     if (!env || !robot) {
@@ -43,6 +45,7 @@ program
       robot,
       tryTimes,
       author,
+      chatId,
     });
   });
 

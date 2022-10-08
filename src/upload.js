@@ -17,6 +17,7 @@ async function realUpload({
   env,
   robot,
   author,
+  chatId,
 
   type,
   projectPath,
@@ -62,6 +63,7 @@ async function realUpload({
     time: timeStampFormat(Date.now(), 'yyyy-MM-dd hh:mm:ss'),
     desc: fullDesc,
     webhookUrl,
+    chatId,
   });
 }
 
