@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx,.vue .",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx,.jsx,.vue .",
-    "npm:token": "script/write-npm-token.js",
+    "npm:token": "node script/write-npm-token.js",
     "release": "npm run npm:token && npm run release-patch && git push --follow-tags origin master && npm publish",
     "release:first": "standard-version --first-release",
     "release-major": "standard-version --release-as major",
