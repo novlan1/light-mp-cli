@@ -1,8 +1,9 @@
 const ci = require('miniprogram-ci');
 const { timeStampFormat } = require('t-comm');
 
-const { getVersion, init, getDesc } = require('./cli');
-const sendRobotMsg = require('./wecom');
+const { init } = require('./cli');
+const { getVersion, getBuildDesc } = require('./util');
+const { sendRobotMsg } = require('./wecom');
 
 
 const DEFAULT_MAX_TRY_TIMES = 3;
@@ -32,7 +33,7 @@ async function realUpload({
   });
 
   const version = await getVersion();
-  const fullDesc = await getDesc(env, author);
+  const fullDesc = await getBuildDesc(env, author);
 
   const uploadResult = await ci.upload({
     project: projectCi,
