@@ -1,7 +1,7 @@
 const { sendWxRobotMarkdown } = require('t-comm');
 
 async function sendRobotMsg({
-  appName,
+  // appName,
   version = '',
   developer = '',
   time = '',
@@ -22,7 +22,7 @@ async function sendRobotMsg({
     `${desc || ''}`,
     `提交时间：${time || ''}`,
   ];
-  const template = `>【${appName}自动化构建成功】${descList.join('，')}`;
+  const template = `>【构建成功】${descList.join('，')}`;
 
   sendWxRobotMarkdown({
     webhookUrl,
