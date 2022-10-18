@@ -50,10 +50,12 @@
     "standard-version": "^9.5.0"
   },
   "dependencies": {
+    "canvas": "^2.10.1",
     "chalk": "^4.1.2",
     "commander": "^9.4.0",
     "figlet": "^1.5.2",
+    "image-size": "^1.0.2",
     "miniprogram-ci": "^1.8.35",
-    "t-comm": "^0.1.10"
+    "t-comm": "^0.1.34"
   }
 }
