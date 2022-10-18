@@ -3,9 +3,6 @@
   "version": "0.0.24",
   "description": "小程序cli工具",
   "main": "index.js",
-  "bin": {
-    "mp-cli": "./bin/www"
-  },
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx,.jsx,.vue .",
